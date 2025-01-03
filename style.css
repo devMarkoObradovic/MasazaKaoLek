@@ -1,0 +1,434 @@
+/* ---------------------------- reset ----------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family:'Nunito' 'Poppins', 'Dancing Script', sans-serif;
+    box-sizing: border-box;
+}
+
+/* --------------------------- colors --------------------------- */
+
+/* #D99D78 (Warm Caramel) 
+ Complementary Color: #78B9D9 (Soft Cool Blue)
+ Dark Accent: #D68F5C (Burnt Sienna)
+ Light Accent: #D9B37B (Light Golden Brown)
+ Neutral Background: #F1F1F1 (Light Ivory)
+ Neutral Background2 :#5B5B5B (Charcoal Gray) 
+ From Logo: #0B4C2E 
+ 
+ ------druga opcija------
+ Primary Color: Deep Green (#0B4C2E)
+ Light Deep Green: #4C8262
+ Lighter Green: #7FBC9B
+ Accent Color: Warm Caramel (#D99D78)
+ Darker Warm Caramel: #B27D50
+ Neutral Colors1: Light Ivory (#F1F1F1)
+ Neutral Colors2: Dark Charcoal Gray (#5B5B5B)
+ Pop of Contrast: Cool Blue Accent (#78B9D9)
+ Light version: Light Warm Caramel: #E6C8A1
+ */
+ :root {
+    --main-color: #D99D78; /* Intense war caramel for highlights */
+    --accent-color: #E6C8A1; /* Light warm for backgrounds */
+    --footer-bg: #222; /* Dark background for footer */
+    --footer-text: #FFF; /* White text for footer */
+}
+
+/* --------------------------- header --------------------------- */
+.header {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient( rgba(0,0,0,0.2), rgba(0, 0, 0, 0.7) ),url('images/proba1.jpg');
+    background-size: cover;
+    background-position: center;
+    padding-top: 80px;
+}
+
+.header-text {
+    padding-top: 400px;
+    height: 400px; /* Set a fixed height for the header */
+    display: flex;
+    justify-content: center;  /* Center horizontally */
+    align-items: center;      /* Center vertically */
+    color: #7FBC9B;
+}
+
+.header-text h1 {
+    color: #D99D78;
+    font-size: 60px;
+}
+
+.header-text h2 {
+    color: #7FBC9B;
+}
+
+.btn-custom {
+    border: 2px solid  #7FBC9B; /* Pink border */
+    background-color: transparent; /* Transparent background */
+    color:  #7FBC9B; /* Pink text */
+    font-size: 18px; /* Adjust font size */
+    padding: 10px 20px; /* Padding inside the button */
+    border-radius: 50px; /* Rounded corners */
+    transition: all 0.3s ease; /* Smooth transition for hover */
+}
+
+.btn-custom:hover {
+    background-color: #4C8262; /* Pink background on hover */
+    color: white; /* White text on hover */
+}
+
+/* Font Awesome Icon Styling */
+.btn-custom i {
+    margin-right: 8px; /* Space between the icon and text */
+}
+
+/* --------------------------- nav-bar --------------------------- */
+.navbar {
+    font-size: 20px; /* Increased font size for better readability */
+    border-bottom: 2px solid #7FBC9B; /* Light green border */
+    transition: background-color 0.3s ease; /* Smooth transition for background */
+    padding: 10px 20px;
+}
+
+/* Scrolled navbar background */
+.navbar.scrolled {
+    background-color:  rgba(217, 157, 120, 0.6); /* Change to a pink shade when scrolled */
+}
+
+.navbar-nav .nav-link {
+    color: white; /* Set navbar text color to white */
+    padding: 10px 20px; /* Add padding to increase clickable area */
+    font-weight: 600; /* Make the text slightly bolder */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #7FBC9B; /* Pink hover effect */
+    transition: color 0.3s ease;
+}
+
+/* --------------------------- navbar-brand --------------------------- */
+.navbar-brand {
+    color: white;
+    cursor: pointer;
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 2px; /* Adds space between the letters for better readability */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+}
+
+.navbar-brand:hover {
+    color: #7FBC9B;
+    transform: scale(1.1); /* Slightly scale up the brand name on hover */
+}
+
+.navbar-brand-sp {
+    color: #4C8262;
+}
+
+/* --------------------------- about-page --------------------------- */
+
+/* Ensuring the section takes up the full viewport height */
+ .about-section {
+    height: 100vh; /* Full screen height */
+    display: flex;
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
+    padding-top: 6rem;
+    padding-bottom: 2rem;
+    /* background: linear-gradient(135deg, #FFA4C6, #A4FFEB, #FFD8E5, #4A8DFF); option */
+    background: linear-gradient(135deg, #D99D78, #E6C8A1, #4C8262); /* Gradient with warm caramel */
+  }
+
+  /* Styling for the image */
+  .about-image {
+    width: 100%; /* Take the full width of the container */
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Styling for the text */
+  .about-text {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+
+  h2 {
+    color: #4C8262;
+  }
+
+  /* Set image container to take up 50% of the screen */
+  .image-container {
+    width: 50%; /* Half of the screen */
+    height: 100%;
+    overflow: hidden; /* Hide any overflow of the image */
+  }
+
+  /* Text container takes up the remaining 50% of the screen */
+  .text-container {
+    width: 50%; /* Half of the screen */
+    padding: 2rem; /* Add some padding */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .text-container h2 {
+    text-align: center;
+  }
+
+/* ------------------------ toggler ----------------------------------- */
+
+/* Toggler Icon (Hamburger) */
+.navbar-toggler-icon {
+    background-color: transparent; 
+    filter: invert(100%);
+}
+
+/* Toggler Icon Hover Effect */
+.navbar-toggler {
+    background-color: transparent; 
+    color: transparent;
+    border-color: transparent;
+}
+
+.navbar-toggler:hover {
+    transform: scale(1.3);
+    transition: 0.3s;
+}
+
+/* --------------------------- services-page --------------------------- */
+#usluge {
+    height: 100vh; /* Full height of the viewport */
+    background: linear-gradient( rgba(255, 200, 200, 0.3), rgba(255, 255, 255, 0.6) ),url('images/paralaks.jpg'); /* Your parallax background image */
+    background-attachment: fixed; /* Creates the parallax effect */
+    background-size: cover; /* Ensures the background covers the entire section */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the background from repeating */
+    color: white; /* Ensures the text is visible against the background */
+}
+
+/* Ensuring text aligns properly */
+#usluge h2 {
+    color: #D99D78; /* Matching heading color with the theme */
+    font-size: 2.5rem; /* Larger size for the service heading */
+    font-weight: bold;
+}
+
+#usluge p {
+    font-size: 1.2rem;
+    color: #333; /* Dark text for better readability */
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+}
+
+/* Styling for each card */
+.card {
+    border: #D99D78;
+    border-radius: 10px; /* Rounded corners for the card */
+    overflow: hidden;
+    transition: transform 0.3s ease; /* Smooth scale effect on hover */
+    background-color: rgba(255, 255, 255, 0.9); /* Slight background for readability */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Slight zoom-in effect */
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover; /* Ensures the image covers the top of the card */
+}
+
+.card-body {
+    background-color: #fff; /* White background for card body */
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #D99D78; 
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #555; /* Slightly lighter color for text */
+}
+
+/* Full-width and full-height section */
+.price-section {
+    height: 100vh; /* Full viewport height */
+    width: 100%; /* Full screen width */
+    background-color: #F4F4F4; /* Neutral background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Centered price list with full-width */
+.price-list {
+    background-color: #FFFFFF; /* White background for the price list */
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Make the container span 90% of the width */
+    max-width: 800px; /* Set a maximum width to keep the content from stretching too wide */
+}
+
+/* Title styling */
+.price-list h2 {
+    font-size: 3rem;
+    color: #B27D50; /* Dark Accent */
+    margin-bottom: 30px;
+}
+
+/* List item styling */
+.price-list ul li {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-bottom: 1px solid #B27D50; /* Dark Accent line separating items */
+    color: #333;
+}
+
+/* Item name styling */
+.price-list .item-name {
+    font-weight: bold;
+    color: #B27D50; /* Darker caramel color */
+}
+
+/* Price styling */
+.price-list .price {
+    font-weight: bold;
+    color: #4C8262; /* Contrast Color (Blue) */
+}
+
+/* --------------------------- contact-section --------------------------- */
+.contact-section {
+    height: 100vh; /* Full viewport height for the contact section */
+    background: linear-gradient(135deg, #E6C8A1, #D99D78, #B27D50); /* Gradient with light caramel */
+}
+
+.footer {
+    margin-top: auto; /* Pushes footer to the bottom of the screen */
+}
+
+/* Ensuring Content Centers Vertically */
+.row.h-100 {
+    height: 100%;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.align-items-center {
+    align-items: center; /* Centers content vertically */
+}
+
+.justify-content-center {
+    justify-content: center; /* Centers content horizontally */
+}
+
+/* --------------------------- smaller devices --------------------------- */
+
+/* header-section */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 20px;
+        font-weight: bold;
+    }
+}
+
+  /* about-section */
+  @media (max-width: 768px) {
+
+    .header-text-1 {
+        font-size: 3rem; /* Smaller header text on mobile */
+    }
+
+    .header-text-2 {
+        font-size: 1.2rem;
+    }
+
+    .btn-custom {
+        font-size: 1rem;
+    }
+
+    .about-section {
+      flex-direction: column; /* Stack the sections vertically */
+      height: auto; /* Allow height to adjust */
+      padding-top: 2rem;
+    }
+
+    .image-container, .text-container {
+      width: 100%; /* Take full width on smaller screens */
+    }
+
+    .about-text {
+      font-size: 1rem; /* Smaller text for mobile screens */
+    }
+
+    h2 {
+      font-size: 1.5rem; /* Smaller heading for mobile screens */
+    }
+
+
+  }
+
+/* services-section */
+@media (max-width: 768px) {
+    #usluge {
+        height: auto; /* Allow the section to adjust height on mobile */
+        padding: 2rem; /* Add 2rem padding on smaller screens */
+    }
+
+    #usluge h2 {
+        font-size: 2rem; /* Smaller heading text on mobile */
+    }
+
+    .card-body {
+        padding: 1rem; /* Padding adjustments for mobile */
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+    }
+
+    .card-text {
+        font-size: 0.9rem;
+    }
+}
+
+/* price section */
+@media (max-width: 768px) {
+    .price-list {
+        padding: 20px;
+        width: 95%; /* On smaller screens, make it span more of the width */
+    }
+
+    .price-list h2 {
+        font-size: 2rem; /* Smaller header for mobile */
+    }
+
+    .price-list ul li {
+        font-size: 1rem; /* Adjust font size for mobile */
+    }
+}
+
+/* contact-section */
+@media (max-width: 768px) {
+    .contact-text {
+        padding-top: 4rem;
+    }
+    .display-4 {
+        font-size: 2rem; /* Smaller header text for mobile */
+    }
+
+    .lead {
+        font-size: 1.1rem; /* Adjust font size for mobile */
+    }
+
+    .footer {
+        padding: 15px 0; /* Adjust footer padding on small screens */
+    }
+}
